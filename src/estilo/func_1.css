@@ -1,0 +1,10 @@
+.label{
+    
+    -fx-font-size: 20;
+}.text-field{
+	-fx-background-color: transparent;
+        -fx-font-size: 17px;
+        -fx-font-family: Arial;
+        -fx-text-fill: black; 
+        -fx-font-weight: bold;
+}

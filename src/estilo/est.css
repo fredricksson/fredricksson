@@ -1,0 +1,13 @@
+
+.text-field{
+    -fx-font-width: 14;
+    -fx-font-size:23;
+    -fx-font-family: "Modern No. 20";
+
+}
+.combo-box{
+
+       -fx-font-width: 14;
+    -fx-font-size:23;
+    -fx-font-family: "Modern No. 20"; 
+}

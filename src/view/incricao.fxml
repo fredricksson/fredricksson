@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" fx:id="border" maxWidth="1100.0" prefHeight="600.0" prefWidth="1100.0" style="-fx-border-color: black; -fx-border-width: 2;" stylesheets="@../estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.IncricaoController">
+   <children>
+      <AnchorPane layoutX="3.0" layoutY="2.0" prefHeight="50.0" prefWidth="1100.0" style="-fx-background-color: cadetblue;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="40.0" layoutX="481.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/cad.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="521.0" layoutY="18.0" style="-fx-font-size: 20; -fx-text-fill: white;" text="Ficha de Inscricao" />
+            <ImageView fx:id="close" fitHeight="150.0" fitWidth="30.0" layoutX="1056.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close_1.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Separator layoutX="50.0" layoutY="105.0" opacity="0.5" prefWidth="200.0" style="-fx-background-color: black;" />
+      <TextField fx:id="codigo" editable="false" layoutX="50.0" layoutY="82.0" prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: transparent;" text="0" />
+      <TextField fx:id="nome" layoutX="51.0" layoutY="127.0" prefHeight="25.0" prefWidth="400.0" promptText="Nome completo" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="50.0" layoutY="156.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <Separator layoutX="50.0" layoutY="375.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <Separator layoutX="50.0" layoutY="321.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <TextField fx:id="bairro" layoutX="51.0" layoutY="291.0" prefHeight="31.0" prefWidth="415.0" promptText="Bairro" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="50.0" layoutY="267.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <TextField fx:id="nr_bi" layoutX="51.0" layoutY="239.0" prefHeight="31.0" prefWidth="408.0" promptText="Numero de B.I" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <TextField fx:id="apelido" layoutX="51.0" layoutY="180.0" prefHeight="25.0" prefWidth="400.0" promptText="Apelido" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="50.0" layoutY="210.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <Separator layoutX="51.0" layoutY="423.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <Separator layoutX="50.0" layoutY="471.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <ComboBox fx:id="provincia" layoutX="46.0" layoutY="441.0" prefHeight="31.0" prefWidth="408.0" promptText="provincia" style="-fx-background-color: tranparent; -fx-font-size: 15;" />
+      <ComboBox fx:id="sexo" layoutX="46.0" layoutY="393.0" prefHeight="31.0" prefWidth="408.0" promptText="sexo" style="-fx-background-color: tranparent; -fx-font-size: 15;" />
+      <DatePicker fx:id="data_nascimento" accessibleRole="BUTTON" layoutX="50.0" layoutY="348.0" opacity="0.5" prefHeight="27.0" prefWidth="400.0" promptText="Data de Nascimento" style="-fx-background-color: whitesmoke; -fx-border-color: transparent;" />
+      <Separator layoutX="570.0" layoutY="210.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <TextField fx:id="nome_pai" layoutX="561.0" layoutY="180.0" prefHeight="25.0" prefWidth="400.0" promptText="Nome do Pai" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <TextField fx:id="nome_mae" layoutX="561.0" layoutY="235.0" prefHeight="25.0" prefWidth="400.0" promptText="Nome da Mae" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="570.0" layoutY="266.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <TextField fx:id="contacto_pai" layoutX="561.0" layoutY="291.0" prefHeight="25.0" prefWidth="400.0" promptText="Contacto do pai" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="570.0" layoutY="323.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <TextField fx:id="contacto_mae" layoutX="561.0" layoutY="348.0" prefHeight="25.0" prefWidth="400.0" promptText="Contacto da Mae" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="570.0" layoutY="376.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <Button fx:id="cadastrar" layoutX="563.0" layoutY="502.0" lineSpacing="10.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="415.0" style="-fx-background-color: cadetblue; -fx-border-radius: 20; -fx-border-color: transparent;" text="Cadastrar" underline="true">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/c.png" />
+               </image>
+               <cursor>
+                 
+               </cursor>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Separator layoutX="570.0" layoutY="158.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+      <TextField fx:id="profissao_pai" layoutX="561.0" layoutY="127.0" prefHeight="25.0" prefWidth="400.0" promptText="Profissao do Pai" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <TextField fx:id="profissao_mae" layoutX="561.0" layoutY="393.0" prefHeight="25.0" prefWidth="400.0" promptText="Profissao da Mae" style="-fx-background-color: transparent; -fx-font-size: 15;" />
+      <Separator layoutX="570.0" layoutY="423.0" opacity="0.5" prefHeight="3.0" prefWidth="400.0" style="-fx-background-color: black;" />
+   </children>
+</AnchorPane>

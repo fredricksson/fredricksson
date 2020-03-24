@@ -1,0 +1,165 @@
+.label{
+    -fx-font-family: "Times New Roman";
+    -fx-font-size: 12pt;
+    -fx-text-fill: black;
+     
+}
+#pane{
+-fx-background-image: url("../img/criancas.jpg"); 
+
+-fx-background-position: center center;
+}
+#border{
+    -fx-border-width:  2px;
+    
+}
+.text-fields{
+    
+    -fx-font-size: 20;
+}
+#titulo{
+   -fx-font-family: "Modern No. 20";
+   
+   -fx-font-size: 25pt;
+/*   -fx-position: center;*/
+   -fx-text-fill: white;
+}
+.root{
+    
+
+}
+.combo-box{
+
+       -fx-font-width: 14;
+    -fx-font-size:20;
+    -fx-font-family: "Modern No. 20"; 
+}
+.text-area{
+       -fx-font-width: 14;
+    -fx-font-size: 16;
+    -fx-font-family: "Modern No. 20"; 
+    
+}
+.text-field{
+    -fx-font-width: 14;
+    -fx-font-size: 16;
+    -fx-font-family: "Modern No. 20";
+
+}
+.table-view {
+  /* -fx-base:  whitesmoke;
+    -fx-control-inner-background: whitesmoke;
+    -fx-background-color:white;
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+     -fx-border-width: 1 0 1 0;
+     -fx-border-color: 
+       black;*/-fx-background-color: transparent;
+}
+.tab-pane{
+    -fx-base: whiteSmoke;
+    -fx-control-inner-background: white;
+    -fx-background-color: whiteSmoke;
+   
+    -fx-padding: 5;
+   
+}
+.separator{
+   
+  -fx-background-color: white;
+}
+#total{
+    
+     -fx-border-color: red;
+}
+.table-view .column-header, .table-view .filler {
+  /* -fx-size: 35;
+    -fx-border-width: 0 0 0 0; -fx-border-color: 
+       black;
+    -fx-border-insets: 0 10 1 0;*   -fx-background-color: cadetblue;/
+ 
+   
+   -fx-border-width: 0 0.2 0 0.2; 
+   -fx-border-color: 
+       black;*/  
+}
+.table-column{
+    
+    -fx-font-size: 25px;
+}
+.list-column{
+    
+       -fx-font-size: 25px;
+}
+.tab-pane .tab {
+    -fx-size: 35;
+ /*   -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color: 
+       white;
+    -fx-border-insets: 0 10 1 0;*/
+    
+}
+.table-view .column-header .label {
+    -fx-font-size: 20pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: black;
+    -fx-alignment: center-left;
+    -fx-opacity: 1;
+  
+}
+
+#lista{
+   -fx-font-family: "Modern No. 20";  
+    
+}
+.tab {
+    -fx-font-size: 18px;
+    -fx-font-family: "Modern No. 20";
+    -fx-text-fill: white;
+    /*-fx-alignment: center-left;
+    -fx-opacity: 1;*/
+}
+.button {
+    /*-fx-padding: 5 22 5 22;   
+    -fx-border-color: #e2e2e2;
+    /*-fx-border-width: 0;
+    -fx-background-radius: 0;*/
+    -fx-border-width: 1;
+     -fx-border-color: #323649;
+    -fx-background-color: whitesmoke;
+    -fx-font-family: "Modern No. 20", Helvetica, Arial, sans-serif;
+    -fx-font-size: 14pt;
+    -fx-text-fill: black;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-cursor:hand;
+    -fx-background-color: lightgray;
+}
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+   /* -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;*/
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}

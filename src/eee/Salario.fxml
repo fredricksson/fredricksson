@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="800.0" style="-fx-border-color: black;" stylesheets="@../estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="eee.salarioController">
+   <children>
+      <AnchorPane layoutX="1.0" layoutY="1.0" prefHeight="50.0" prefWidth="798.0" style="-fx-background-color: cadetblue;">
+         <children>
+            <ImageView fx:id="close" fitHeight="150.0" fitWidth="40.0" layoutX="744.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="26.0" layoutY="12.0" style="-fx-text-fill: white; -fx-font-size: 25;" text="Pagamento de salario" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="nome" layoutX="22.0" layoutY="119.0" prefHeight="200.0" prefWidth="757.0" style="-fx-border-color: black;">
+         <children>
+            <TextField fx:id="nome1" layoutX="41.0" layoutY="34.0" prefHeight="35.0" prefWidth="522.0" promptText="digite o nome do funcionario" style="-fx-border-color: black; -fx-background-color: tansparent;" />
+            <Label layoutX="41.0" layoutY="6.0" text="Nome do funcionario:" />
+            <Label layoutX="41.0" layoutY="83.0" text="Mës:" />
+            <ComboBox fx:id="mes" layoutX="41.0" layoutY="110.0" prefHeight="33.0" prefWidth="390.0" promptText="seleccione" style="-fx-background-color: transparent; -fx-border-color: black;" />
+            <ImageView fitHeight="150.0" fitWidth="20.0" layoutX="534.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/pes.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="30.0" layoutY="346.0" prefHeight="123.0" prefWidth="735.0" style="-fx-background-color: azure; -fx-border-color: blue;">
+         <children>
+            <Label layoutX="296.0" layoutY="14.0" text="Salario mensal ´[MTs]" />
+            <Label fx:id="salario" layoutX="546.0" layoutY="53.0" style="-fx-text-fill: green; -fx-font-size: 30;" text="00.00MT" />
+         </children>
+      </AnchorPane>
+      <Button fx:id="pagar" layoutX="564.0" layoutY="67.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="215.0" style="-fx-text-fill: blue; -fx-border-color: blue;" text="Efectuar pagamento" underline="true">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-card-payment-80.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

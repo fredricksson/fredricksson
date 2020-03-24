@@ -1,0 +1,7 @@
+.text-field{
+	-fx-background-color: transparent;
+        -fx-font-size: 15px;
+        -fx-font-family: Arial;
+        -fx-text-fill: blue; 
+        -fx-font-weight: bold;
+}

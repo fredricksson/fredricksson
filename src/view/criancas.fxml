@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" stylesheets="@../estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.criancaController">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Todas Crianças">
+               <content>
+                  <BorderPane maxHeight="200.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: whitesmoke;">
+                     <top>
+                        <VBox maxHeight="100.0" prefHeight="100.0" prefWidth="955.0" style="-fx-background-color: #1e556f;" BorderPane.alignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <children>
+                              <HBox prefHeight="53.0" prefWidth="890.0">
+                                 <children>
+                                    <TextField fx:id="pesquisa" maxWidth="500.0" prefHeight="40.0" prefWidth="500.0" promptText="pesquise..." style="-fx-background-radius: 15; -fx-font-size: 16;">
+                                       <HBox.margin>
+                                          <Insets left="100.0" />
+                                       </HBox.margin></TextField>
+                                    <ImageView fitHeight="50.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/pes.png" />
+                                       </image>
+                                       <HBox.margin>
+                                          <Insets left="-40.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ImageView>
+                                    <ComboBox fx:id="categoria" prefHeight="31.0" prefWidth="301.0" promptText="Seleccione  ano">
+                                       <HBox.margin>
+                                          <Insets left="50.0" top="4.0" />
+                                       </HBox.margin>
+                                    </ComboBox>
+                                    <Button fx:id="eliminar" mnemonicParsing="false" onAction="#deleteSelectedRow" opacity="0.9" prefWidth="250.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-border-radius: 10;" text="Eliminar">
+                                       <HBox.margin>
+                                          <Insets left="50.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-cancel-96%20(1).png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets top="50.0" />
+                                 </opaqueInsets>
+                                 <VBox.margin>
+                                    <Insets top="50.0" />
+                                 </VBox.margin>
+                              </HBox>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </VBox>
+                     </top>
+                     <center>
+                        <TableView fx:id="tabela" minHeight="400.0" prefHeight="155.0" prefWidth="890.0" BorderPane.alignment="CENTER">
+                          <columns>
+                              <TableColumn fx:id="select" prefWidth="129.0" text="Mark" />
+                            <TableColumn fx:id="id" maxWidth="1.7976931348623157E308" prefWidth="125.0" text="ID" />
+                              <TableColumn fx:id="nome" maxWidth="1.7976931348623157E308" prefWidth="438.0" text="Nome " />
+                              <TableColumn fx:id="apelido" maxWidth="1.7976931348623157E308" prefWidth="289.0" text="Apelido" />
+                            <TableColumn fx:id="ano" maxWidth="1.7976931348623157E308" prefWidth="242.0" text="Ano" />
+                          </columns>
+                           <BorderPane.margin>
+                              <Insets left="100.0" right="100.0" top="20.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab style="-fx-border-width: 0;" text="Mensalidades">
+               <content>
+                  <BorderPane maxHeight="150.0" minHeight="500.0" prefHeight="169.0" prefWidth="1090.0">
+                     <top>
+                        <StackPane prefHeight="100.0" prefWidth="1090.0" style="-fx-background-color: #1e556f;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ToolBar maxWidth="1046.0" prefHeight="71.0" prefWidth="1046.0">
+                                <items>
+                                  <Button fx:id="pagar" mnemonicParsing="false" prefHeight="61.0" prefWidth="257.0" text="efectuar pagamento">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-card-payment-80.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="lista" mnemonicParsing="false" prefHeight="60.0" prefWidth="281.0" text="Lista de Mensalidades">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/esta.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="definir" mnemonicParsing="false" prefHeight="60.0" prefWidth="285.0" text="Definir Mensalidades">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/conf.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="actualizar" mnemonicParsing="false" prefHeight="60.0" prefWidth="196.0" style="-fx-border-color: blue; -fx-text-fill: blue;" text="Actualizar" />
+                                </items>
+                              </ToolBar>
+                           </children>
+                           <BorderPane.margin>
+                              <Insets />
+                           </BorderPane.margin>
+                        </StackPane>
+                     </top>
+                     <center>
+                        <TableView fx:id="tabela_mensalidades" maxHeight="400.0" prefHeight="400.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="nome2" prefWidth="280.0" text="Nome" />
+                            <TableColumn fx:id="jan" prefWidth="81.0" text="jan" />
+                              <TableColumn fx:id="fev" prefWidth="81.0" text="fev" />
+                              <TableColumn fx:id="mar" prefWidth="81.0" text="mar" />
+                              <TableColumn fx:id="abr" prefWidth="81.0" text="abr" />
+                              <TableColumn fx:id="mai" prefWidth="81.0" text="mai" />
+                              <TableColumn fx:id="jun" prefWidth="81.0" text="jun" />
+                              <TableColumn fx:id="jul" prefWidth="81.0" text="jul" />
+                              <TableColumn fx:id="ago" prefWidth="81.0" text="ago" />
+                              <TableColumn fx:id="set" prefWidth="81.0" text="set" />
+                              <TableColumn fx:id="out" prefWidth="81.0" text="out" />
+                              <TableColumn fx:id="nov" prefWidth="81.0" text="nov" />
+                              <TableColumn fx:id="total" prefWidth="103.0" text="Total" />
+                          </columns>
+                           <BorderPane.margin>
+                              <Insets left="40.0" right="40.0" top="30.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+   <top>
+      <StackPane prefHeight="54.0" prefWidth="1100.0" style="-fx-background-color: #323649;" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-font-size: 22; -fx-text-fill: white;" text="Gerenciamento de Criancas" />
+         </children>
+      </StackPane>
+   </top>
+   <bottom>
+      <HBox maxHeight="40.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: #1e556f;" BorderPane.alignment="CENTER">
+         <children>
+            <Label style="-fx-text-fill: white;" text="Centro Infantil Crianca Alegre">
+               <HBox.margin>
+                  <Insets left="10.0" top="5.0" />
+               </HBox.margin>
+            </Label>
+            <StackPane prefHeight="30.0" prefWidth="888.0">
+               <children>
+                  <Label fx:id="time" style="-fx-text-fill: white;" text="02:59" />
+               </children>
+            </StackPane>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

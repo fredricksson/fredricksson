@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FuncionarioController">
+   <top>
+      <StackPane prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #323649;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="titulo" style="-fx-text-fill: WHITE;" text="Funcionarios" />
+         </children>
+      </StackPane>
+   </top>
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Lista de Funcionarios">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <center>
+                        <TableView fx:id="tabela_funcionario" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="codigo1" prefWidth="116.0" text="Codigo" />
+                            <TableColumn fx:id="nome1" prefWidth="384.0" text="Nome" />
+                              <TableColumn fx:id="funcao1" prefWidth="400.0" text="Funcao" />
+                              <TableColumn fx:id="apelido1" prefWidth="300.0" text="apelido" />
+                          </columns>
+                           <BorderPane.margin>
+                              <Insets bottom="30.0" left="100.0" right="100.0" top="10.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                     <top>
+                        <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #1e556f;" BorderPane.alignment="CENTER">
+                           <children>
+                              <TextField fx:id="pesquisa" prefHeight="40.0" prefWidth="500.0" promptText="pesquise.." style="-fx-background-radius: 16; -fx-font-size: 16;">
+                                 <HBox.margin>
+                                    <Insets left="100.0" top="50.0" />
+                                 </HBox.margin>
+                              </TextField>
+                              <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/pes.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="-40.0" top="54.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                     </top>
+                  </BorderPane>
+               </content>
+          </Tab>
+          <Tab text="Contratar">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <StackPane prefHeight="83.0" prefWidth="990.0" style="-fx-background-color: #1e556f;" BorderPane.alignment="CENTER">
+                           <children>
+                              <Label style="-fx-text-fill: white; -fx-font-size: 25;" text="Contrataçao de Funcionario" />
+                           </children>
+                        </StackPane>
+                     </top>
+                     <center>
+                        <GridPane maxWidth="1100.0" prefHeight="292.0" prefWidth="990.0" BorderPane.alignment="CENTER">
+                          <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.0" minWidth="10.0" prefWidth="146.0" />
+                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.0" minWidth="10.0" prefWidth="322.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="488.0" minWidth="0.0" prefWidth="223.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="749.0" minWidth="10.0" prefWidth="303.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints maxHeight="195.0" minHeight="2.0" prefHeight="37.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="315.0" minHeight="5.0" prefHeight="34.0" vgrow="SOMETIMES" />
+                            <RowConstraints maxHeight="401.0" minHeight="10.0" prefHeight="38.0" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="412.0" minHeight="0.0" prefHeight="39.0" />
+                              <RowConstraints maxHeight="412.0" minHeight="6.0" prefHeight="51.0" />
+                              <RowConstraints maxHeight="412.0" minHeight="0.0" prefHeight="36.0" />
+                              <RowConstraints maxHeight="412.0" minHeight="10.0" prefHeight="70.0" />
+                          </rowConstraints>
+                           <children>
+                              <Label prefHeight="19.0" prefWidth="68.0" style="-fx-font-size: 20;" text="Apelido:">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="apelido" prefHeight="35.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" />
+                              <Label style="-fx-font-size: 20;" text="Nome:" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="nome" layoutX="100.0" layoutY="18.0" prefHeight="35.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <Label layoutX="30.0" layoutY="65.0" style="-fx-font-size: 20;" text="Formado/a em:" GridPane.rowIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label layoutX="30.0" layoutY="113.0" style="-fx-font-size: 20;" text="Funcao:" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <ComboBox fx:id="funcao" prefHeight="35.0" prefWidth="321.0" promptText="seleccione" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <Label style="-fx-font-size: 20;" text="Data de nascimento:" GridPane.columnIndex="2">
+                                 <GridPane.margin>
+                                    <Insets left="40.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <DatePicker fx:id="data_nascimento" prefHeight="35.0" prefWidth="310.0" GridPane.columnIndex="3" />
+                              <Label layoutX="518.0" layoutY="24.0" style="-fx-font-size: 20;" text="Estado civil:" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                 <GridPane.margin>
+                                    <Insets left="40.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <Label style="-fx-font-size: 20;" text="Morada:" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                 <padding>
+                                    <Insets left="40.0" />
+                                 </padding>
+                              </Label>
+                              <TextField fx:id="morada" maxWidth="310.0" prefHeight="35.0" prefWidth="310.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                              <Label style="-fx-font-size: 20;" text="Contacto:" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                 <GridPane.margin>
+                                    <Insets left="40.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="contacto" maxWidth="310.0" prefHeight="35.0" prefWidth="310.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                              <ComboBox fx:id="estado_civil" prefHeight="35.0" prefWidth="310.0" promptText="seleccione" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                              <Label style="-fx-font-size: 20;" text="Genero:" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="20.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <HBox prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                 <children>
+                                    <RadioButton fx:id="masculino" mnemonicParsing="false" style="-fx-font-family: Century; -fx-font-size: 16;" text="Masculino">
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                    <RadioButton fx:id="femenino" mnemonicParsing="false" style="-fx-font-size: 16; -fx-font-family: Century;" text="Femenino">
+                                       <padding>
+                                          <Insets left="5.0" />
+                                       </padding>
+                                       <HBox.margin>
+                                          <Insets top="10.0" />
+                                       </HBox.margin>
+                                    </RadioButton>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="516.0" layoutY="129.0" style="-fx-font-size: 20;" text="Codigo:" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                 <GridPane.margin>
+                                    <Insets left="40.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="codigo" layoutX="698.0" layoutY="122.0" maxWidth="310.0" prefHeight="35.0" prefWidth="310.0" promptText="digite um codigo a sua escolha" style="-fx-font-size: 18;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                              <TextArea fx:id="formado_em" prefHeight="200.0" prefWidth="200.0" promptText="escola de formacao e curso" style="-fx-font-size: 18;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Label layoutX="516.0" layoutY="170.0" style="-fx-font-size: 20;" text="Salario" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                 <GridPane.margin>
+                                    <Insets left="40.0" />
+                                 </GridPane.margin>
+                              </Label>
+                              <TextField fx:id="salario" layoutX="698.0" layoutY="161.0" maxWidth="310.0" prefHeight="35.0" prefWidth="310.0" promptText="digite o valor salarial do funcionario" style="-fx-font-size: 18;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                           </children>
+                           <BorderPane.margin>
+                              <Insets top="30.0" />
+                           </BorderPane.margin>
+                        </GridPane>
+                     </center>
+                     <bottom>
+                        <StackPane prefHeight="90.0" prefWidth="990.0" BorderPane.alignment="CENTER">
+                           <children>
+                              <Button fx:id="contratar" mnemonicParsing="false" prefHeight="61.0" prefWidth="473.0" style="-fx-background-color: cadetblue; -fx-font-size: 25; -fx-background-radius: 20; -fx-border-color: transparent;" text="Contratar">
+                                 <graphic>
+                                    <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../img/icons8-add-administrator-100.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                           <padding>
+                              <Insets bottom="20.0" />
+                           </padding>
+                        </StackPane>
+                     </bottom>
+                  </BorderPane>
+               </content>
+          </Tab>
+            <Tab text="Salario e diversos">
+               <content>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0">
+                     <top>
+                        <StackPane prefHeight="141.0" prefWidth="990.0" style="-fx-background-color: #1e556f;" BorderPane.alignment="CENTER">
+                           <children>
+                              <ToolBar prefHeight="66.0" prefWidth="590.0">
+                                <items>
+                                  <Button fx:id="salariob" mnemonicParsing="false" prefHeight="55.0" prefWidth="300.0" text="Pagar salario">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-card-payment-80.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Button fx:id="demissao" mnemonicParsing="false" prefHeight="55.0" prefWidth="300.0" text="Demitir">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-remove-administrator-100.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic></Button>
+                                    <Separator orientation="VERTICAL" prefHeight="20.0" />
+                                    <Button fx:id="actualizar" mnemonicParsing="false" prefHeight="55.0" prefWidth="300.0" text="Actualizar">
+                                       <graphic>
+                                          <ImageView fitHeight="150.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/icons8-update-left-rotation-30.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                </items>
+                                 <StackPane.margin>
+                                    <Insets left="200.0" right="200.0" />
+                                 </StackPane.margin>
+                              </ToolBar>
+                           </children>
+                        </StackPane>
+                     </top>
+                     <center>
+                        <TableView fx:id="tabela_salario" prefHeight="200.0" prefWidth="817.0" BorderPane.alignment="CENTER">
+                          <columns>
+                            <TableColumn fx:id="nome2" prefWidth="200.0" text="Nome" />
+                            <TableColumn fx:id="jan" minWidth="3.0" prefWidth="70.0" text="jan" />
+                              <TableColumn fx:id="fev" prefWidth="70.0" text="Fev" />
+                              <TableColumn fx:id="mar" prefWidth="70.0" text="Mar" />
+                              <TableColumn fx:id="abr" prefWidth="70.0" text="Abri" />
+                              <TableColumn fx:id="mai" prefWidth="70.0" text="Mai" />
+                              <TableColumn fx:id="jun" prefWidth="70.0" text="Jun" />
+                              <TableColumn fx:id="jul" prefWidth="70.0" text="Jul" />
+                              <TableColumn fx:id="ago" prefWidth="70.0" text="ago" />
+                              <TableColumn fx:id="set" prefWidth="70.0" text="set" />
+                              <TableColumn fx:id="out" prefWidth="70.0" text="out" />
+                              <TableColumn fx:id="nov" prefWidth="70.0" text="nov" />
+                              <TableColumn fx:id="dez" prefWidth="70.0" text="dez" />
+                              <TableColumn fx:id="total" prefWidth="400.0" text="Total" />
+                          </columns>
+                           <BorderPane.margin>
+                              <Insets bottom="50.0" left="100.0" right="100.0" top="20.0" />
+                           </BorderPane.margin>
+                        </TableView>
+                     </center>
+                  </BorderPane>
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>

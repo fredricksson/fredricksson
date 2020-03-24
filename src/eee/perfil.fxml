@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+
+<AnchorPane id="AnchorPane" maxHeight="1000.0" maxWidth="1000.0" prefHeight="600.0" prefWidth="996.0" style="-fx-border-color: black; -fx-border-width: 2;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.PerfilController">
+   <children>
+      <AnchorPane layoutX="2.0" layoutY="2.0" maxHeight="50.0" maxWidth="1000.0" prefHeight="50.0" prefWidth="1000.0" style="-fx-background-color: cadetblue;">
+         <children>
+            <ImageView fx:id="close" fitHeight="150.0" fitWidth="35.0" layoutX="947.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="55.0" layoutY="13.0" style="-fx-text-fill: white; -fx-font-size: 23;" text="Informacoes Gerais" />
+         </children>
+      </AnchorPane>
+      <StackPane layoutX="2.0" layoutY="59.0" prefHeight="50.0" prefWidth="1000.0">
+         <children>
+            <Label fx:id="nome" text="ISAbel" />
+         </children>
+      </StackPane>
+      <Label layoutX="35.0" layoutY="152.0" text="sexo:" />
+      <TextField fx:id="sexo" editable="false" layoutX="85.0" layoutY="150.0" prefHeight="25.0" prefWidth="198.0" style="-fx-background-color: transparent;" />
+      <Label layoutX="336.0" layoutY="152.0" text="Morada:" />
+      <TextField fx:id="morada" editable="false" layoutX="403.0" layoutY="149.0" prefHeight="25.0" prefWidth="198.0" />
+      <Label layoutX="656.0" layoutY="152.0" text="data de Nascimento:" />
+      <TextField fx:id="data_nascimento" editable="false" layoutX="816.0" layoutY="149.0" prefHeight="25.0" prefWidth="166.0" />
+      <Label layoutX="31.0" layoutY="198.0" text="Naturalidade:" />
+      <TextField fx:id="naturalidade" editable="false" layoutX="146.0" layoutY="195.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="336.0" layoutY="198.0" text="B.I numero:" />
+      <TextField fx:id="nr_bi" editable="false" layoutX="433.0" layoutY="195.0" prefHeight="25.0" prefWidth="180.0" />
+      <AnchorPane layoutX="13.0" layoutY="109.0" prefHeight="35.0" prefWidth="981.0" style="-fx-background-color: #323649;">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" style="-fx-text-fill: white;" text="informacoes pessoais" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="12.0" layoutY="275.0" prefHeight="35.0" prefWidth="981.0" style="-fx-background-color: #323649;">
+         <children>
+            <Label layoutX="14.0" layoutY="6.0" style="-fx-text-fill: white;" text="informacoes de Encarregados" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="31.0" layoutY="328.0" text="Nome do Pai:" />
+      <TextField fx:id="nome_pai" editable="false" layoutX="146.0" layoutY="325.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="347.0" layoutY="328.0" text="Nome da Mae:" />
+      <TextField fx:id="nome_mae" editable="false" layoutX="465.0" layoutY="325.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="656.0" layoutY="208.0" text="Doença:" />
+      <TextField editable="false" layoutX="721.0" layoutY="208.0" prefHeight="25.0" prefWidth="191.0" />
+      <Label layoutX="31.0" layoutY="379.0" text="Contacto do Pai:" />
+      <TextField fx:id="contacto_pai" editable="false" layoutX="167.0" layoutY="376.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="351.0" layoutY="379.0" text="Contacto do Mae:" />
+      <TextField fx:id="contacto_mae" editable="false" layoutX="492.0" layoutY="376.0" prefHeight="25.0" prefWidth="173.0" />
+      <Label layoutX="662.0" layoutY="328.0" text="Profissao do pai:" />
+      <TextField fx:id="profissao_pai" editable="false" layoutX="795.0" layoutY="325.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="667.0" layoutY="379.0" text="Profissao da Mae:" />
+      <TextField fx:id="profissao_mae" editable="false" layoutX="806.0" layoutY="376.0" prefHeight="25.0" prefWidth="180.0" />
+      <Separator layoutX="25.0" layoutY="449.0" prefHeight="0.0" prefWidth="960.0" style="-fx-background-color: black;" />
+      <Button fx:id="actualizar" layoutX="35.0" layoutY="495.0" mnemonicParsing="false" onAction="#actualizarCrianca" prefHeight="50.0" prefWidth="270.0" text="Actualizar">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-update-left-rotation-30.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button fx:id="editar" layoutX="370.0" layoutY="495.0" mnemonicParsing="false" onAction="#editarCrianca" prefHeight="56.0" prefWidth="270.0" style="-fx-text-fill: blue;" text="Editar">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-registration-100.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Button layoutX="693.0" layoutY="495.0" mnemonicParsing="false" prefHeight="56.0" prefWidth="270.0" style="-fx-text-fill: red;" text="Mensalidades">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/icons8-card-payment-80.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+   <stylesheets>
+      <URL value="@../estilo/estilo.css" />
+      <URL value="@../estilo/es.css" />
+      <URL value="@../estilo/func.css" />
+   </stylesheets>
+</AnchorPane>

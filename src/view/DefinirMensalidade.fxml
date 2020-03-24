@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="642.0" style="-fx-border-color: black; -fx-border-width: 2;" stylesheets="@../estilo/estilo.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.definirController">
+   <children>
+      <TextField fx:id="mensalidade" layoutX="104.0" layoutY="121.0" prefHeight="37.0" prefWidth="417.0" promptText="Digite o valor de mensalidade" style="-fx-background-color: transparent; -fx-border-color: black;" />
+      <Label layoutX="104.0" layoutY="84.0" text="defina o preco da Mensalidade:" />
+      <TextField fx:id="inscricao" layoutX="104.0" layoutY="240.0" prefHeight="37.0" prefWidth="417.0" promptText="digite o valor de inscricao" style="-fx-background-color: transparent; -fx-border-color: black;" />
+      <Label layoutX="104.0" layoutY="209.0" text="defina o preco da Incricao:" />
+      <AnchorPane layoutX="2.0" layoutY="2.0" prefHeight="50.0" prefWidth="638.0" style="-fx-background-color: cadetblue;">
+         <children>
+            <Label layoutX="38.0" layoutY="17.0" style="-fx-text-fill: white; -fx-font-size: 20;" text="definicao de Mensalidade" />
+            <ImageView fx:id="close" fitHeight="150.0" fitWidth="35.0" layoutX="598.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/close.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Button fx:id="definir" layoutX="104.0" layoutY="336.0" mnemonicParsing="false" prefHeight="62.0" prefWidth="417.0" text="Definir">
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/depositphotos_79977490-stock-illustration-check-mark-icon.jpg" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+      <Label fx:id="lb1" layoutX="111.0" layoutY="165.0" style="-fx-text-fill: red;" text="* digite apenas um valor numerico" visible="false" />
+      <Label fx:id="lb2" layoutX="104.0" layoutY="285.0" style="-fx-text-fill: red;" text="* digite apenas um valor numerico" visible="false" />
+   </children>
+</AnchorPane>
